@@ -28,41 +28,37 @@
             <li id="do10sPrev" class="doplay__btn">10秒戻る</li>
             <li id="dopause" class="doplay__btn">一時停止</li>
             <li id="do10sNext" class="doplay__btn">10秒先へ</li>
+            <li id="dostop" class="doplay__btn">停止</li>
+            <li id="mute" class="doplay__btn">ミュート</li>
         </ul>
 
         <nav>
             <ul>
-                <div class="stop">
-                    <li id="dostop" class="doplay__btn">停止</li>
-                    <li id="mute" class="doplay__btn">ミュート</li>
+                <li>
+                    <form id="doSpeed">
+                        <input type="radio" id="mslow" name="speed" value="0.25" />
+                        <label for="mslow">0.25</label>
+                        <input type="radio" id="slow" name="speed" value="0.5" />
+                        <label for="slow">0.5</label>
+                        <input type="radio" id="normal" name="speed" value="1.0" checked />
+                        <label for="normal">1</label>
+                        <input type="radio" id="hspeed" name="speed" value="1.5" />
+                        <label for="hspeed">1.5</label>
+                        <input type="radio" id="mhspeed" name="speed" value="2" />
+                        <label for="mhspeed">2</label>
+                    </form>
+                </li>
+                <div class="search">
+                    <form>
+                        <input type="search" id="ytSearch" value="TRiDENT" />
+                        <button id="searchBtn">検索</button>
+                    </form>
                 </div>
-                <div class="playlist">
-                    <li>
-                        <form id="doSpeed">
-                            <input type="radio" id="mslow" name="speed" value="0.25" />
-                            <label for="mslow">0.25</label>
-                            <input type="radio" id="slow" name="speed" value="0.5" />
-                            <label for="slow">0.5</label>
-                            <input type="radio" id="normal" name="speed" value="1.0" checked />
-                            <label for="normal">1</label>
-                            <input type="radio" id="hspeed" name="speed" value="1.5" />
-                            <label for="hspeed">1.5</label>
-                            <input type="radio" id="mhspeed" name="speed" value="2" />
-                            <label for="mhspeed">2</label>
-                        </form>
-                    </li>
-                    <div class="search">
-                        <form>
-                            <input type="search" id="ytSearch" value="TRiDENT" />
-                            <button id="searchBtn">検索</button>
-                        </form>
-                    </div>
-                    <li>
-                        <select id="MovieId" class="ytMovie" name="ytMovie">
-                            <option selected>選択してください。</option>
-                        </select>
-                    </li>
-                </div>
+                <li>
+                    <select id="MovieId" class="ytMovie" name="ytMovie">
+                        <option selected>選択してください。</option>
+                    </select>
+                </li>
                 <li id="favListContainer">
                     <strong>お気に入りリスト:</strong>
                     <ul id="favList"></ul>
@@ -181,7 +177,7 @@
             // --- 検索機能 ---
             const USE_LOCAL = true;
             function ytSearch(val) {
-                const key = 'AIzaSyAWBmSwwtLiw1kb183GZkQAXEEZT6RjanA'; // 自分のキー
+                const key = 'AIzaSy'; // 自分のキー
                 const apiUrl = `https://www.googleapis.com/youtube/v3/search?type=video&part=snippet&maxResults=10&key=${key}&q=${val}`;
                 const localUrl = './data/sample.json';
 

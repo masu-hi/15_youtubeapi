@@ -29,12 +29,6 @@ li {
     list-style: none;
 }
 
-nav {
-    ul {
-        display: flex;
-        gap: 20px;
-    }
-}
 
 .doplay {
     display: flex;
