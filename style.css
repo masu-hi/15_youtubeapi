@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+body {
+    background-color: #ED9E31;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.hert {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    gap: 365px;
+}
+
+.inner {
+    margin-top: 100px;
+
+}
+
+.ytMovie {
+    max-width: 630px;
+}
+
+li {
+    padding: 5px;
+    list-style: none;
+}
+
+nav {
+    ul {
+        display: flex;
+        gap: 20px;
+    }
+}
+
+.doplay {
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+}
+
+.doplay__btn {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.doplay__btn:hover {
+    transition: .3s;
+    color: #333;
+    border: 1px solid #333;
+}
